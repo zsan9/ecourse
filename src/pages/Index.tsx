@@ -1310,15 +1310,6 @@ const Index = () => {
 
               <AccordionItem value="item-8" className="bg-card-elevated rounded-lg px-6 border border-border/50">
                 <AccordionTrigger className="text-left font-bold">
-                  Will I get access to 1:1 support?
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-400">
-                  We don't offer 1:1 coaching as part of this course, but you will get access to our community where you can ask any questions you might have as you start your YouTube journey or get feedback from the community on your content.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-9" className="bg-card-elevated rounded-lg px-6 border border-border/50">
-                <AccordionTrigger className="text-left font-bold">
                   Is it possible to pay in instalments?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-400">

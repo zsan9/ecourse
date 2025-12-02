@@ -57,7 +57,7 @@ const Pricing = () => {
                 </span>
               </div>
               <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl mb-2">Course + Mentorship</CardTitle>
+                <CardTitle className="text-2xl mb-2">Premium Course</CardTitle>
                 <CardDescription>For serious creators</CardDescription>
                 <div className="mt-6">
                   <span className="text-5xl font-bold">$497</span>
@@ -67,7 +67,6 @@ const Pricing = () => {
                 <ul className="space-y-3">
                   {[
                     "Everything in Course Access",
-                    "1-on-1 mentorship calls",
                     "Personalized channel audit",
                     "Private community access",
                     "Priority support",
