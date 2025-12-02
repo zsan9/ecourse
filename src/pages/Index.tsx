@@ -99,8 +99,8 @@ const ScrollingReviews = () => {
       <div className="relative">
         <div className="flex gap-6" ref={row1Ref}>
           {[...reviews1, ...reviews1].map((review, index) => (
-            <Card key={index} className="flex-shrink-0 w-[500px] bg-gray-900 border-2 border-gray-800 shadow-xl">
-              <CardContent className="p-6">
+            <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[400px] md:w-[500px] bg-gray-900 border-2 border-gray-800 shadow-xl">
+              <CardContent className="p-4 sm:p-6">
                 <div className="flex mb-3">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-accent text-accent" />
@@ -121,8 +121,8 @@ const ScrollingReviews = () => {
       <div className="relative">
         <div className="flex gap-6" ref={row2Ref}>
           {[...reviews2, ...reviews2].map((review, index) => (
-            <Card key={index} className="flex-shrink-0 w-[500px] bg-gray-900 border-2 border-gray-800 shadow-xl">
-              <CardContent className="p-6">
+            <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[400px] md:w-[500px] bg-gray-900 border-2 border-gray-800 shadow-xl">
+              <CardContent className="p-4 sm:p-6">
                 <div className="flex mb-3">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-accent text-accent" />
@@ -148,17 +148,17 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 rounded-sm mx-4 mb-8 border border-gray-800">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 rounded-sm mx-2 sm:mx-4 mb-8 border border-gray-800">
+        <div className="container mx-auto px-3 sm:px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-10">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-6 py-3 rounded-sm text-sm font-bold mb-4 uppercase tracking-wider">
-            <Youtube className="w-4 h-4" />
-            <span>From the creator with 1.74M+ YouTube subscribers</span>
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-3 sm:px-6 py-2 sm:py-3 rounded-sm text-xs sm:text-sm font-bold mb-4 uppercase tracking-wider max-w-full">
+            <Youtube className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+            <span className="truncate sm:whitespace-normal">From the creator with 1.74M+ YouTube subscribers</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white leading-[1.1]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] px-2">
             Master YouTube Content Creation -- Make Passive Income Doing What You Love
           </h1>
-          <p className="text-xl md:text-2xl text-gray-400 font-medium">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 font-medium px-2">
             Join Stevie's no bullsh*t course to save yourself YEARS of failure
           </p>
           
@@ -179,11 +179,11 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="text-lg px-10 py-7 rounded-sm bg-white text-gray-900 hover:bg-gray-100 font-bold uppercase tracking-wider border-2 border-white shadow-xl" asChild>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2">
+            <Button size="lg" className="text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-7 rounded-sm bg-white text-gray-900 hover:bg-gray-100 font-bold uppercase tracking-wider border-2 border-white shadow-xl w-full sm:w-auto" asChild>
               <Link to="/pricing">Get Started Today</Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-10 py-7 rounded-sm border-2 border-white/30 text-white hover:bg-white/10 font-bold uppercase tracking-wider">
+            <Button size="lg" variant="outline" className="text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-7 rounded-sm border-2 border-white/30 text-white hover:bg-white/10 font-bold uppercase tracking-wider w-full sm:w-auto">
               View Curriculum
             </Button>
           </div>
@@ -210,10 +210,10 @@ const Index = () => {
 
       {/* Student Reviews - Scrolling */}
       <section id="course" className="py-24 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 rounded-sm mx-4 mb-8 border border-gray-800">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-6 text-white tracking-tight">What Students Are Saying</h2>
-            <p className="text-xl text-gray-400 font-medium">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-white tracking-tight px-2">What Students Are Saying</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 font-medium px-2">
               Real results from creators who transformed their channels
             </p>
           </div>
@@ -224,10 +224,10 @@ const Index = () => {
 
       {/* About Stevie Section */}
       <section id="about" className="py-24 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 rounded-sm mx-4 mb-8 border border-gray-800">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-5xl mx-auto mb-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-black mb-4 text-white tracking-tight">YouTube completely changed my life.</h2>
-            <p className="text-xl md:text-2xl text-gray-400 font-medium">And I promise it can change yours too</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 text-white tracking-tight px-2">YouTube completely changed my life.</h2>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 font-medium px-2">And I promise it can change yours too</p>
           </div>
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="aspect-square bg-muted rounded-sm overflow-hidden shadow-2xl border-2 border-gray-800">
@@ -238,7 +238,7 @@ const Index = () => {
               />
             </div>
             <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">Meet Stevie Emerson</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight">Meet Stevie Emerson</h2>
               <p className="text-lg text-gray-300 leading-relaxed font-medium">
                 Stevie Emerson is a proven YouTube creator with 1.74M subscribers focused on comedy, dating, relationships, and lifestyle content. Known for engaging storytelling and viral content, Stevie has mastered the art of creating videos that connect with millions of viewers.
               </p>
@@ -275,14 +275,14 @@ const Index = () => {
       </section>
 
       {/* Journey Infographic Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 rounded-sm mx-4 mb-8 border border-gray-800">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 rounded-sm mx-2 sm:mx-4 mb-8 border border-gray-800">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center mb-8 sm:mb-12 text-white tracking-tight px-2">
               5 years later I was finally able to go full time and make real money
             </h2>
             
-            <div className="relative bg-gray-900 border-2 border-gray-800 rounded-sm p-8 md:p-12 shadow-2xl min-h-[600px]">
+              <div className="relative bg-gray-900 border-2 border-gray-800 rounded-sm p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl min-h-[400px] sm:min-h-[500px] md:min-h-[600px] overflow-x-auto">
               {/* Title at top */}
               <div className="text-center mb-8">
                 <h3 className="text-2xl md:text-3xl font-black text-white mb-4 tracking-tight">
@@ -291,7 +291,7 @@ const Index = () => {
               </div>
               
               {/* SVG Infographic */}
-              <svg viewBox="0 0 900 550" className="w-full h-auto" preserveAspectRatio="xMidYMid meet">
+              <svg viewBox="0 0 900 550" className="w-full h-auto min-w-[900px] sm:min-w-0" preserveAspectRatio="xMidYMid meet">
                 <defs>
                   <linearGradient id="growthGradient" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="0%" stopColor="#22c55e" stopOpacity="0.3" />
@@ -405,7 +405,7 @@ const Index = () => {
             
             {/* Call to action */}
             <div className="text-center mt-8">
-              <Button size="lg" className="text-lg px-8 py-6 rounded-sm" asChild>
+              <Button size="lg" className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 rounded-sm" asChild>
                 <Link to="/pricing">Change your life today and join the course for $495</Link>
               </Button>
             </div>
@@ -414,10 +414,10 @@ const Index = () => {
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="py-20 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 border border-gray-800 rounded-sm mx-4 mb-8">
-        <div className="container mx-auto px-4">
+      <section id="reviews" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 border border-gray-800 rounded-sm mx-2 sm:mx-4 mb-8">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-6">What Creators Who Took the Course Have to Say</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight mb-6 px-2">What Creators Who Took the Course Have to Say</h2>
           </div>
 
           {/* Creators Panel */}
@@ -475,17 +475,17 @@ const Index = () => {
       </section>
 
       {/* Secret Formula Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 border border-gray-800 rounded-sm mx-4 mb-8">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 border border-gray-800 rounded-sm mx-2 sm:mx-4 mb-8">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-5xl mx-auto mb-16">
             <div className="text-center mb-12 space-y-6">
-              <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight px-2">
                 The "secret" formula isn't secret at all...it's about excecution
               </h2>
-              <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto px-2">
                 Over the last 12 years I've learned that your content means nothing if you don't have the correct excecution strategy underneath it
               </p>
-              <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto px-2">
                 In this course not only will you learn how to make banger content, you will learn the proper excecution strategy to blow your channel up
               </p>
             </div>
@@ -527,7 +527,7 @@ const Index = () => {
 
           {/* The #1 Way Section */}
           <div className="max-w-6xl mx-auto text-center space-y-8 mt-16">
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight px-2">
               The #1 way to explode your channel is quite simple...
             </h2>
             
@@ -606,7 +606,7 @@ const Index = () => {
             </div>
             
             {/* Text below graphic */}
-            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mt-8">
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mt-8 px-2">
               I personally guarantee if you commit to this workflow your channel will grow and you will begin creating passive income
             </p>
             
@@ -624,13 +624,13 @@ const Index = () => {
       </section>
 
       {/* Systems Block */}
-      <section className="py-20 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 border border-gray-800 rounded-sm mx-4 mb-8">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 border border-gray-800 rounded-sm mx-2 sm:mx-4 mb-8">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight text-center mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight text-center mb-4 px-2">
               🚀 YouTube Content Creation System
             </h2>
-            <p className="text-lg md:text-xl text-gray-400 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-2">
               Checklists, frameworks and templates to turn you into a content-creation beast
             </p>
             
@@ -702,7 +702,7 @@ const Index = () => {
             
             {/* Button */}
             <div className="text-center mt-12">
-              <Button size="lg" className="text-lg px-8 py-6 rounded-sm" asChild>
+              <Button size="lg" className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 rounded-sm" asChild>
                 <Link to="/pricing">Join now for $495 and start building your systems</Link>
               </Button>
             </div>
@@ -712,23 +712,23 @@ const Index = () => {
 
       {/* Course Academy Block */}
       <section className="py-20 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 border border-gray-800 rounded-sm mx-4 mb-8">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight mb-6 sm:mb-8 px-2">
               Join Stevie's YouTube Content Creation Academy
             </h2>
             
             <div className="mb-12">
               <div className="flex items-center justify-center gap-4 mb-4">
                 <span className="text-3xl line-through text-gray-400">$995</span>
-                <span className="text-5xl md:text-6xl font-bold text-white">$495</span>
+                <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">$495</span>
               </div>
               <p className="text-lg text-gray-400 mb-6">Our best price ever</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Button size="lg" className="text-lg px-8 py-6 rounded-sm" asChild>
+                <Button size="lg" className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 rounded-sm" asChild>
                   <Link to="/pricing">Join Today For $495</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 rounded-sm" asChild>
+                <Button size="lg" variant="outline" className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 rounded-sm" asChild>
                   <Link to="/pricing">Or Spread The Cost Over 2 Months</Link>
                 </Button>
               </div>
@@ -794,10 +794,10 @@ const Index = () => {
             <div className="mb-8">
               <div className="flex items-center justify-center gap-4 mb-4">
                 <span className="text-3xl line-through text-gray-400">$995</span>
-                <span className="text-5xl md:text-6xl font-bold text-white">$495</span>
+                <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">$495</span>
               </div>
               <p className="text-lg text-gray-400 mb-6">Or Spread The Cost Over 2 Months</p>
-              <Button size="lg" className="text-lg px-8 py-6 rounded-sm" asChild>
+              <Button size="lg" className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 rounded-sm" asChild>
                 <Link to="/pricing">Join Today And Save Over 50%</Link>
               </Button>
             </div>
@@ -806,10 +806,10 @@ const Index = () => {
       </section>
 
       {/* Case Studies Section Header */}
-      <section className="py-12 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 border border-gray-800 rounded-sm mx-4 mb-8">
-        <div className="container mx-auto px-4">
+      <section className="py-8 sm:py-12 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 border border-gray-800 rounded-sm mx-2 sm:mx-4 mb-8">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight mb-4 px-2">
               We've helped creators shortcut their YouTube learning curve...
             </h2>
           </div>
@@ -817,14 +817,14 @@ const Index = () => {
       </section>
 
       {/* Beginner Case Study */}
-      <section className="py-20 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 border border-gray-800 rounded-sm mx-4 mb-8">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 border border-gray-800 rounded-sm mx-2 sm:mx-4 mb-8">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-sm text-base font-bold mb-6">
                 Beginner
               </div>
-              <h3 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">From Zero to First 1,000 Subscribers</h3>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight mb-4 px-2">From Zero to First 1,000 Subscribers</h3>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Learn how creators with zero experience used Stevie's frameworks to launch their channels and hit their first major milestone
               </p>
@@ -884,7 +884,7 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="bg-muted rounded-sm p-8 text-center">
-                    <div className="text-6xl font-bold text-primary mb-2">0 → 1,200</div>
+                    <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary mb-2">0 → 1,200</div>
                     <div className="text-xl text-gray-400 mb-6">Subscribers</div>
                     <div className="space-y-3 text-left">
                       <div className="flex items-center gap-2">
@@ -914,13 +914,13 @@ const Index = () => {
 
       {/* Intermediate Case Study */}
       <section className="py-20 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 border border-gray-800 rounded-sm mx-4 mb-8">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-sm text-base font-bold mb-6">
                 Intermediate
               </div>
-              <h3 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">From 10K to 100K Subscribers</h3>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight mb-4 px-2">From 10K to 100K Subscribers</h3>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Discover how creators broke through plateaus and scaled their channels using Stevie's advanced systems and strategies
               </p>
@@ -1009,14 +1009,14 @@ const Index = () => {
       </section>
 
       {/* Advanced Case Study */}
-      <section className="py-20 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 border border-gray-800 rounded-sm mx-4 mb-8">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 border border-gray-800 rounded-sm mx-2 sm:mx-4 mb-8">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-sm text-base font-bold mb-6">
                 Advanced
               </div>
-              <h3 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">From 100K to 500K+ Subscribers</h3>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight mb-4 px-2">From 100K to 500K+ Subscribers</h3>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See how established creators scaled their channels into thriving businesses using Stevie's team-building and monetization strategies
               </p>
@@ -1105,10 +1105,10 @@ const Index = () => {
       </section>
 
       {/* What's Actually In The Course Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 border border-gray-800 rounded-sm mx-4 mb-8">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 border border-gray-800 rounded-sm mx-2 sm:mx-4 mb-8">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight text-center mb-8 sm:mb-12 px-2">
               Okay, I get it – but what's actually in the course?
             </h2>
             
@@ -1212,20 +1212,20 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 border border-gray-800 rounded-sm mx-4 mb-8">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 border border-gray-800 rounded-sm mx-2 sm:mx-4 mb-8">
+        <div className="container mx-auto px-3 sm:px-4 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight px-2">
               Ready to Start Your YouTube Journey?
             </h2>
-            <p className="text-xl text-gray-400">
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 px-2">
               Learn from a creator with 1.74M subscribers and start building your successful channel today
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-6 rounded-sm" asChild>
+              <Button size="lg" variant="secondary" className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 rounded-sm w-full sm:w-auto" asChild>
                 <Link to="/pricing">Enroll in the Course Today</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="text-lg px-8 py-6 rounded-sm border-primary-foreground/20 hover:bg-primary-foreground/10 text-primary-foreground">
+              <Button size="lg" variant="outline" asChild className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 rounded-sm border-primary-foreground/20 hover:bg-primary-foreground/10 text-primary-foreground w-full sm:w-auto">
                 <a href="https://www.youtube.com/@stevie_emerson" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Youtube className="w-5 h-5" />
                   <span>Watch Stevie's Content</span>
@@ -1237,15 +1237,15 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 border border-gray-800 rounded-sm mx-4 mb-8">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 border border-gray-800 rounded-sm mx-2 sm:mx-4 mb-8">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight text-center mb-8 sm:mb-12 px-2">
               Frequently Asked Questions
             </h2>
             
             <Accordion type="single" collapsible className="w-full space-y-4">
-              <AccordionItem value="item-1" className="bg-card-elevated rounded-lg px-6 border border-border/50">
+              <AccordionItem value="item-1" className="bg-card-elevated rounded-lg px-4 sm:px-6 border border-border/50">
                 <AccordionTrigger className="text-left font-bold">
                   Is this really the best price?
                 </AccordionTrigger>
@@ -1323,7 +1323,7 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="border-t py-12 bg-card">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
             <div>
               <h3 className="font-bold text-lg mb-4">Stevie Emerson</h3>

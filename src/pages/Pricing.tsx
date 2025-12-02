@@ -9,13 +9,13 @@ const Pricing = () => {
       <Header />
 
       {/* Pricing Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <section className="py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2">
               In my best year I made over $500k in AD revenue alone
             </h1>
-            <p className="text-2xl text-muted-foreground">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground px-2">
               And I'll show you exactly how to do it
             </p>
           </div>
@@ -27,7 +27,7 @@ const Pricing = () => {
                 <CardTitle className="text-2xl mb-2">Course Access</CardTitle>
                 <CardDescription>Perfect for getting started</CardDescription>
                 <div className="mt-6">
-                  <span className="text-5xl font-bold">$197</span>
+                  <span className="text-4xl sm:text-5xl font-bold">$197</span>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -87,7 +87,7 @@ const Pricing = () => {
 
       {/* Footer */}
       <footer className="border-t py-12 bg-card">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-3 sm:px-4">
           <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
             <div>
               <h3 className="font-bold text-lg mb-4">Stevie Emerson</h3>
